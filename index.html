@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Invitation ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --pink: #f8e5e9;
+      --rose: #ae7181;
+      --deep: #643e4b;
+      --muted: #997984;
+      --cream: #fffaf8;
+      --border: #efd9de;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(
+        145deg, #fffaf8, #fbe9ed, #f8dfe5
+      );
+      font-family: "DM Sans", sans-serif;
+      color: var(--deep);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 16px;
+      overflow-x: hidden;
+    }
+
+    .heart {
+      position: fixed;
+      color: #d89ba9;
+      opacity: .25;
+      pointer-events: none;
+      animation: float 8s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-12deg); }
+      50% { transform: translateY(-35px) rotate(12deg); }
+    }
+
+    .card {
+      width: 100%;
+      max-width: 530px;
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(255,255,255,.95);
+      border-radius: 30px;
+      padding: 48px 38px;
+      box-shadow: 0 24px 75px rgba(127,67,83,.13);
+      backdrop-filter: blur(15px);
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      animation: appear .9s ease both;
+    }
+
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .ornament {
+      font-size: 34px;
+      color: #c68b9b;
+      margin-bottom: 15px;
+    }
+
+    h1, h2 {
+      font-family: "Playfair Display", serif;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: clamp(39px, 8vw, 57px);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin: 0 0 20px;
+    }
+
+    h1 em {
+      color: var(--rose);
+      font-weight: 400;
+    }
+
+    .intro {
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 14px;
+      max-width: 360px;
+      margin: 0 auto 32px;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 26px 0;
+      color: #c18b99;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: var(--border);
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+      margin-bottom: 7px;
+    }
+
+    .subtext {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 24px;
+    }
+
+    .dates {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .date-option {
+      border: 1.5px solid var(--border);
+      border-radius: 17px;
+      padding: 20px 10px;
+      background: white;
+      cursor: pointer;
+      transition: .25s ease;
+      color: var(--deep);
+      font-family: inherit;
+      position: relative;
+    }
+
+    .date-option:hover {
+      transform: translateY(-4px);
+      border-color: var(--rose);
+      box-shadow: 0 8px 20px rgba(174,113,129,.12);
+    }
+
+    .date-option.selected {
+      background: #f9e9ed;
+      border-color: var(--rose);
+      box-shadow: 0 0 0 2px rgba(174,113,129,.12);
+    }
+
+    .date-option.selected::after {
+      content: "♥";
+      position: absolute;
+      top: 9px;
+      right: 13px;
+      color: var(--rose);
+      font-size: 12px;
+    }
+
+    .weekday {
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--muted);
+    }
+
+    .date-number {
+      font-family: "Playfair Display", serif;
+      font-size: 35px;
+      margin: 7px 0 2px;
+    }
+
+    .month {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .time {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--rose);
+    }
+
+    .note {
+      background: #fdf0f2;
+      border: 1px solid #f4dce2;
+      border-radius: 18px;
+      padding: 22px;
+      text-align: left;
+      margin: 28px 0;
+    }
+
+    .note-title {
+      font-family: "Playfair Display", serif;
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .note p {
+      font-size: 13px;
+      line-height: 1.9;
+      color: #8e6a76;
+      margin: 0;
+    }
+
+    .button {
+      width: 100%;
+      border: none;
+      border-radius: 50px;
+      background: var(--rose);
+      color: white;
+      font-family: "DM Sans", sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 19px;
+      cursor: pointer;
+      transition: .25s;
+    }
+
+    .button:hover {
+      background: #96586a;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(174,113,129,.25);
+    }
+
+    .button:disabled {
+      opacity: .45;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .footer {
+      margin-top: 24px;
+      font-size: 11px;
+      color: #b18d98;
+      letter-spacing: .5px;
+    }
+
+    .confirmation {
+      display: none;
+      animation: appear .6s ease both;
+    }
+
+    .confirmation h2 {
+      font-size: 42px;
+      margin: 12px 0;
+    }
+
+    .confirmation p {
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 14px;
+    }
+
+    .chosen-date {
+      background: #fdf0f2;
+      padding: 20px;
+      border-radius: 16px;
+      margin: 25px 0;
+      font-weight: 600;
+    }
+
+    .secondary {
+      margin-top: 15px;
+      background: transparent;
+      color: var(--rose);
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 450px) {
+      .card { padding: 38px 22px; }
+      .date-option { padding: 18px 8px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Floating decorative hearts -->
+  <div class="heart" style="top:10%;left:8%;font-size:30px">♡</div>
+  <div class="heart" style="top:75%;left:6%;font-size:24px;animation-delay:2s">♥</div>
+  <div class="heart" style="top:18%;right:8%;font-size:35px;animation-delay:1s">♡</div>
+  <div class="heart" style="bottom:12%;right:9%;font-size:28px;animation-delay:3s">♥</div>
+
+  <main class="card">
+
+    <section id="invitation">
+      <div class="eyebrow">A little invitation</div>
+      <div class="ornament">♡</div>
+
+      <h1>Will you go on<br><em>a date with me?</em></h1>
+
+      <p class="intro">
+        I've been thinking... I'd really love to spend
+        some time with you.
+        <br><br>
+        Just the two of us, good conversations,
+        a few laughs, and hopefully a lovely memory.
+        <br><br>
+        So, what do you say? ♡
+      </p>
+
+      <div class="divider">✧</div>
+
+      <div class="section-title">Pick our day</div>
+      <p class="subtext">
+        Choose whichever date works best for you.
+        I'll take care of the rest.
+      </p>
+
+      <div class="dates">
+
+        <button class="date-option"
+                data-date="Saturday, 24 October 2026"
+                onclick="selectDate(this)">
+          <div class="weekday">Saturday</div>
+          <div class="date-number">24</div>
+          <div class="month">October</div>
+          <div class="time">5:00 PM</div>
+        </button>
+
+        <button class="date-option"
+                data-date="Sunday, 25 October 2026"
+                onclick="selectDate(this)">
+          <div class="weekday">Sunday</div>
+          <div class="date-number">25</div>
+          <div class="month">October</div>
+          <div class="time">5:00 PM</div>
+        </button>
+
+        <button class="date-option"
+                data-date="Monday, 26 October 2026"
+                onclick="selectDate(this)">
+          <div class="weekday">Monday</div>
+          <div class="date-number">26</div>
+          <div class="month">October</div>
+          <div class="time">5:00 PM</div>
+        </button>
+
+        <button class="date-option"
+                data-date="Tuesday, 27 October 2026"
+                onclick="selectDate(this)">
+          <div class="weekday">Tuesday</div>
+          <div class="date-number">27</div>
+          <div class="month">October</div>
+          <div class="time">5:00 PM</div>
+        </button>
+
+      </div>
+
+      <div class="note">
+        <div class="note-title">♡ A little note...</div>
+        <p>
+          Dress code: Wear something cute and comfortable,
+          but make sure it's warm too!
+          <br><br>
+          I want you to feel as comfortable as possible.
+          Don't worry about planning anything —
+          I've got that covered. ♡
+        </p>
+      </div>
+
+      <button id="confirmButton"
+              class="button"
+              onclick="confirmDate()"
+              disabled>
+        It's a date! ♡
+      </button>
+
+      <div class="footer">
+        Made with a little courage & a lot of hope ♡
+      </div>
+    </section>
+
+    <section id="confirmation" class="confirmation">
+      <div class="eyebrow">It's official</div>
+      <div class="ornament">♥</div>
+
+      <h2>It's a date! ♡</h2>
+
+      <p>
+        Well, you've just made someone very happy.
+        <br>
+        I can't wait to see you!
+      </p>
+
+      <div class="chosen-date" id="chosenDate"></div>
+
+      <p>
+        Your only job is to show up, look cute,
+        stay warm, and enjoy yourself.
+        <br><br>
+        I'll handle the rest. ♡
+      </p>
+
+      <button class="button" onclick="sendResponse()">
+        Send my answer ♡
+      </button>
+
+      <button class="secondary" onclick="goBack()">
+        Choose a different date
+      </button>
+
+      <div class="footer">
+        Looking forward to making memories ♡
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    let selectedDate = "";
+
+    // CHANGE THIS TO YOUR OWN EMAIL ADDRESS
+    const yourEmail = "you@example.com";
+
+    function selectDate(button) {
+      document.querySelectorAll(".date-option")
+        .forEach(option => option.classList.remove("selected"));
+
+      button.classList.add("selected");
+      selectedDate = button.dataset.date;
+
+      document.getElementById("confirmButton").disabled = false;
+    }
+
+    function confirmDate() {
+      if (!selectedDate) return;
+
+      document.getElementById("invitation").style.display = "none";
+      document.getElementById("confirmation").style.display = "block";
+
+      document.getElementById("chosenDate").textContent =
+        selectedDate + " at 5:00 PM";
+
+      launchConfetti();
+    }
+
+    function goBack() {
+      document.getElementById("confirmation").style.display = "none";
+      document.getElementById("invitation").style.display = "block";
+    }
+
+    function sendResponse() {
+      const subject = "It's a date! ♡";
+      const body =
+        "I'd love to go on a date with you! ♡\n\n" +
+        "My chosen date is:\n" +
+        selectedDate + " at 5:00 PM\n\n" +
+        "Looking forward to it!";
+
+      window.location.href =
+        "mailto:" + yourEmail +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+    }
+
+    function launchConfetti() {
+      const symbols = ["♥", "♡", "✦", "✧"];
+
+      for (let i = 0; i < 45; i++) {
+        const piece = document.createElement("span");
+        piece.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+        piece.style.cssText = `
+          position: fixed;
+          left: ${Math.random() * 100}vw;
+          top: -30px;
+          font-size: ${12 + Math.random() * 17}px;
+          color: ${Math.random() > .5 ? "#ce91a0" : "#e5b3bf"};
+          pointer-events: none;
+          z-index: 100;
+          transition: transform 3s ease-in, opacity 3s ease-in;
+        `;
+
+        document.body.appendChild(piece);
+
+        requestAnimationFrame(() => {
+          piece.style.transform =
+            `translateY(${window.innerHeight + 100}px)
+             rotate(${Math.random() * 720}deg)`;
+          piece.style.opacity = "0";
+        });
+
+        setTimeout(() => piece.remove(), 3200);
+      }
+    }
+  </script>
+
+</body>
+</html>
