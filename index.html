@@ -1,71 +1,1062 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>A Little Invitation ♡</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#623d4b;--rose:#ad7182;--muted:#967783;--line:#efd8df}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 20% 10%,#fffaf8,#f9e5e9 65%,#f3d5de);font-family:'DM Sans',sans-serif;color:var(--ink);display:grid;place-items:center;padding:30px 15px;overflow-x:hidden}.card{width:min(100%,520px);padding:28px 34px 40px;background:rgba(255,255,255,.9);border:1px solid white;border-radius:30px;box-shadow:0 25px 75px #925b6b2b;text-align:center;position:relative;z-index:1;animation:appear .8s both}.portrait{width:100%;height:310px;object-fit:cover;object-position:center 40%;border-radius:20px;display:block}.photo-wrap{position:relative;margin-bottom:27px}.photo-wrap:after{content:'♡';position:absolute;bottom:-18px;right:20px;background:#fff7f8;border:1px solid var(--line);color:var(--rose);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:27px}.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--rose);font-weight:700}h1,h2,.section-title,.note-title{font-family:'Playfair Display',serif;font-weight:500}h1{font-size:clamp(38px,8vw,54px);line-height:1.14;margin:16px 0 18px;letter-spacing:-1px}h1 em{color:var(--rose);font-weight:400}.intro{font-size:14px;color:var(--muted);line-height:1.85;margin:0 auto 26px;max-width:355px}.divider{display:flex;align-items:center;gap:15px;color:var(--rose);margin:26px 0}.divider:before,.divider:after{content:'';height:1px;background:var(--line);flex:1}.section-title{font-size:25px;margin-bottom:7px}.subtext{font-size:12px;color:var(--muted);margin-bottom:22px}.dates{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.date-option{font:inherit;background:white;color:var(--ink);border:1.5px solid var(--line);border-radius:16px;padding:19px 10px;cursor:pointer;position:relative;transition:.2s}.date-option:hover{transform:translateY(-3px);border-color:var(--rose)}.date-option.selected{background:#fbe9ee;border-color:var(--rose);box-shadow:0 0 0 2px #ad718220}.date-option.selected:after{content:'♥';position:absolute;right:12px;top:8px;color:var(--rose)}.weekday{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted)}.number{font:35px 'Playfair Display',serif;margin:5px 0}.month{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}.time{font-size:12px;font-weight:700;color:var(--rose);margin-top:12px}.note{background:#fdf0f3;border:1px solid #f3dce2;border-radius:18px;text-align:left;padding:22px;margin:28px 0}.note-title{font-size:21px;margin-bottom:10px}.note p{font-size:13px;line-height:1.8;color:#8f6c77;margin:0}.button{width:100%;border:0;border-radius:40px;padding:18px;background:var(--rose);color:white;font:700 14px 'DM Sans',sans-serif;cursor:pointer;transition:.2s}.button:hover:not(:disabled){background:#965b6b;transform:translateY(-2px)}.button:disabled{opacity:.45;cursor:not-allowed}.footer{font-size:11px;color:#b18e99;margin-top:23px}.confirmation{display:none;animation:appear .6s both}.confirmation h2{font-size:43px}.confirmation p{color:var(--muted);font-size:14px;line-height:1.85}.chosen{background:#fdf0f3;border-radius:16px;padding:20px;margin:24px 0;font-weight:700}.secondary{border:0;background:none;color:var(--rose);text-decoration:underline;margin-top:20px;cursor:pointer}.heart{position:fixed;pointer-events:none;color:#cb91a1;opacity:.3;font-size:32px;animation:float 7s ease-in-out infinite}@keyframes float{50%{transform:translateY(-30px) rotate(15deg)}}@keyframes appear{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@media(max-width:450px){.card{padding:18px 20px 32px}.portrait{height:265px}}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Garden decorations: flowers, raspberries and sweet treats */
-.garden{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
-.garden-item{position:absolute;display:block;font-size:clamp(23px,4vw,43px);opacity:.75;filter:drop-shadow(0 4px 7px #a76b7820);animation:drift 7s ease-in-out infinite alternate;user-select:none}
-.garden-item:nth-child(even){animation-duration:9s;animation-delay:-3s}
-.garden-item:nth-child(3n){animation-duration:11s;animation-delay:-6s}
-@keyframes drift{from{transform:translateY(0) rotate(-12deg)}to{transform:translateY(-24px) rotate(14deg)}}
-.photo-wrap{isolation:isolate}.photo-wrap .photo-flower{position:absolute;z-index:2;font-size:33px;filter:drop-shadow(0 3px 4px #0002);pointer-events:none}.photo-flower.one{top:-13px;left:-12px;transform:rotate(-15deg)}.photo-flower.two{top:-12px;right:-10px;transform:rotate(20deg)}.photo-flower.three{bottom:-13px;left:-10px;transform:rotate(-20deg)}
-.treats{display:flex;align-items:center;justify-content:center;gap:14px;font-size:25px;margin:14px 0 18px}.treats span{display:inline-block;animation:drift 5s ease-in-out infinite alternate}.treats span:nth-child(even){animation-delay:-2s}
-.berry-message{font-size:12px;color:var(--rose);margin:0 0 19px;letter-spacing:.3px}
-.card{overflow:hidden}
-@media(max-width:700px){.garden-item{opacity:.32;font-size:25px}.garden-item:nth-child(n+11){display:none}.photo-wrap .photo-flower{font-size:26px}}
-@media(prefers-reduced-motion:reduce){.garden-item,.treats span{animation:none}}
+<title>A Little Invitation ♡</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --rose: #b66d83;
+  --deep: #653d4c;
+  --muted: #967783;
+  --border: #efd8df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 45px 16px;
+  background:
+    radial-gradient(circle at 10% 15%, #ffe8ee, transparent 35%),
+    radial-gradient(circle at 90% 80%, #f9dce5, transparent 40%),
+    linear-gradient(145deg, #fffaf8, #f9e8ed);
+  font-family: "DM Sans", sans-serif;
+  color: var(--deep);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* FIREWORKS BACKGROUND */
+
+#fireworksCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* FLOATING DECORATIONS */
+
+.decorations {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating {
+  position: absolute;
+  font-size: 28px;
+  opacity: .65;
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-12deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(12deg);
+  }
+}
+
+.f1 { top: 5%; left: 5%; font-size: 40px; }
+.f2 { top: 15%; right: 6%; animation-delay: 1s; }
+.f3 { top: 36%; left: 3%; font-size: 35px; animation-delay: 2s; }
+.f4 { top: 52%; right: 4%; animation-delay: 3s; }
+.f5 { top: 73%; left: 5%; animation-delay: 1.5s; }
+.f6 { bottom: 8%; right: 7%; font-size: 38px; }
+.f7 { top: 26%; right: 3%; animation-delay: 2.5s; }
+.f8 { bottom: 20%; left: 2%; animation-delay: 4s; }
+.f9 { top: 7%; right: 24%; font-size: 20px; }
+.f10 { bottom: 5%; left: 24%; font-size: 22px; }
+
+/* MAIN CARD */
+
+.card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 540px;
+  padding: 43px 36px;
+  background: rgba(255,255,255,.94);
+  border: 1px solid rgba(255,255,255,.95);
+  border-radius: 32px;
+  box-shadow: 0 25px 80px rgba(128,65,86,.15);
+  backdrop-filter: blur(16px);
+  text-align: center;
+  animation: appear .9s ease both;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--rose);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ornament {
+  color: var(--rose);
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(38px, 8vw, 55px);
+  line-height: 1.16;
+  letter-spacing: -1px;
+  margin: 10px 0 20px;
+}
+
+h1 em {
+  color: var(--rose);
+  font-weight: 400;
+}
+
+/* PHOTO */
+
+.photo-frame {
+  position: relative;
+  width: 235px;
+  height: 295px;
+  margin: 15px auto 28px;
+  padding: 7px;
+  background: white;
+  border: 1px solid #edd4dc;
+  border-radius: 135px 135px 20px 20px;
+  box-shadow: 0 15px 35px rgba(140,80,100,.16);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  border-radius: 130px 130px 15px 15px;
+  display: block;
+}
+
+.photo-flower {
+  position: absolute;
+  font-size: 30px;
+  animation: float 5s ease-in-out infinite;
+}
+
+.photo-flower.left {
+  bottom: 12px;
+  left: -20px;
+}
+
+.photo-flower.right {
+  top: 30px;
+  right: -23px;
+  animation-delay: 1.5s;
+}
+
+.photo-flower.top {
+  top: -20px;
+  left: -15px;
+  font-size: 24px;
+}
+
+/* TEXT */
+
+.intro {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.95;
+  max-width: 380px;
+  margin: 0 auto 30px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 28px 0;
+  color: #c78d9f;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.subtext {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+/* DATE OPTIONS */
+
+.dates {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.date-option {
+  position: relative;
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  padding: 20px 8px;
+  color: var(--deep);
+  cursor: pointer;
+  font-family: inherit;
+  transition: .25s ease;
+}
+
+.date-option:hover {
+  transform: translateY(-4px);
+  border-color: var(--rose);
+  box-shadow: 0 10px 22px rgba(174,100,125,.12);
+}
+
+.date-option.selected {
+  background: #fbe9ee;
+  border-color: var(--rose);
+  box-shadow: 0 0 0 2px rgba(182,109,131,.12);
+}
+
+.date-option.selected::after {
+  content: "♥";
+  position: absolute;
+  top: 9px;
+  right: 12px;
+  font-size: 12px;
+  color: var(--rose);
+}
+
+.weekday {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  color: var(--muted);
+}
+
+.date-number {
+  font-family: "Playfair Display", serif;
+  font-size: 37px;
+  margin: 7px 0 2px;
+}
+
+.month {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.time {
+  display: block;
+  margin-top: 12px;
+  color: var(--rose);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.finish {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* FOOD SECTION */
+
+.treats {
+  margin: 28px 0 12px;
+  padding: 20px 12px;
+  border-radius: 18px;
+  background: #fff4f6;
+  border: 1px solid #f4e1e6;
+}
+
+.treats-title {
+  font-family: "Playfair Display", serif;
+  font-size: 19px;
+  margin-bottom: 14px;
+}
+
+.food-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  font-size: 28px;
+}
+
+.food-icons span {
+  display: inline-block;
+  animation: bob 3s ease-in-out infinite;
+}
+
+.food-icons span:nth-child(2) { animation-delay: .4s; }
+.food-icons span:nth-child(3) { animation-delay: .8s; }
+.food-icons span:nth-child(4) { animation-delay: 1.2s; }
+.food-icons span:nth-child(5) { animation-delay: 1.6s; }
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+.treats p {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 15px 0 0;
+}
+
+/* DRESS CODE */
+
+.note {
+  background: #fdf0f3;
+  border: 1px solid #f1dce2;
+  border-radius: 19px;
+  padding: 23px;
+  margin: 24px 0;
+  text-align: left;
+}
+
+.note-title {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  margin-bottom: 11px;
+}
+
+.note p {
+  font-size: 13px;
+  color: #8e6b78;
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* BUTTONS */
+
+.button {
+  width: 100%;
+  padding: 19px;
+  border: none;
+  border-radius: 50px;
+  background: var(--rose);
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.button:hover {
+  background: #99596e;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(174,113,129,.25);
+}
+
+.button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.footer {
+  margin-top: 25px;
+  font-size: 11px;
+  color: #b18d99;
+  letter-spacing: .4px;
+}
+
+/* CONFIRMATION */
+
+.confirmation {
+  display: none;
+  animation: appear .6s ease both;
+}
+
+.confirmation h2 {
+  font-size: 43px;
+  margin: 12px 0;
+}
+
+.confirmation p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.chosen-date {
+  background: #fdf0f3;
+  border: 1px solid #f1dce2;
+  padding: 22px;
+  border-radius: 17px;
+  margin: 25px 0;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.secondary {
+  margin-top: 17px;
+  background: transparent;
+  border: none;
+  color: var(--rose);
+  font-family: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .card {
+    padding: 35px 20px;
+    border-radius: 25px;
+  }
+
+  .photo-frame {
+    width: 205px;
+    height: 260px;
+  }
+
+  .date-option {
+    padding: 17px 6px;
+  }
+
+  .date-number {
+    font-size: 33px;
+  }
+
+  .floating {
+    opacity: .35;
+  }
+
+  .food-icons {
+    gap: 12px;
+    font-size: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
 </style>
 </head>
+
 <body>
-<div class="garden" aria-hidden="true">
-  <span class="garden-item" style="top:4%;left:3%">🌸</span>
-  <span class="garden-item" style="top:12%;right:4%">🌷</span>
-  <span class="garden-item" style="top:28%;left:2%">🍓</span>
-  <span class="garden-item" style="top:36%;right:2%">🧁</span>
-  <span class="garden-item" style="top:49%;left:3%">🌼</span>
-  <span class="garden-item" style="top:58%;right:3%">🍒</span>
-  <span class="garden-item" style="top:69%;left:2%">🥐</span>
-  <span class="garden-item" style="top:80%;right:2%">🌹</span>
-  <span class="garden-item" style="top:91%;left:5%">🍰</span>
-  <span class="garden-item" style="top:95%;right:5%">🌸</span>
-  <span class="garden-item" style="top:22%;right:10%">🫐</span>
-  <span class="garden-item" style="top:75%;left:11%">🍓</span>
+
+<!-- ANIMATED FIREWORKS CANVAS -->
+
+<canvas id="fireworksCanvas" aria-hidden="true"></canvas>
+
+<!-- FLOATING DECORATIONS -->
+
+<div class="decorations" aria-hidden="true">
+  <span class="floating f1">🌸</span>
+  <span class="floating f2">🌷</span>
+  <span class="floating f3">🍓</span>
+  <span class="floating f4">🌺</span>
+  <span class="floating f5">🧁</span>
+  <span class="floating f6">🌸</span>
+  <span class="floating f7">🍒</span>
+  <span class="floating f8">🥐</span>
+  <span class="floating f9">💗</span>
+  <span class="floating f10">🌼</span>
 </div>
-<span class="heart" style="top:12%;left:5%">♡</span><span class="heart" style="top:70%;right:5%;animation-delay:2s">♥</span>
+
 <main class="card">
-<div class="photo-wrap"><img class="portrait" src="portrait.jpg" alt="Portrait for the date invitation"><span class="photo-flower one" aria-hidden="true">🌸</span><span class="photo-flower two" aria-hidden="true">🌷</span><span class="photo-flower three" aria-hidden="true">🌼</span></div>
-<section id="invitation">
-<div class="eyebrow">✦ A little invitation ✦</div><div class="treats" aria-hidden="true"><span>🌷</span><span>🍓</span><span>🌸</span><span>🧁</span><span>🌹</span></div>
-<h1>Will you go on<br><em>a date with me?</em></h1>
-<p class="intro">I've been thinking… I'd really love to spend some time with you.<br><br>Just the two of us, good conversations, a few laughs, and hopefully a lovely memory.<br><br>So, what do you say? ♡</p>
-<p class="berry-message">A little sweetness, just for you ♡</p><div class="divider">🌸 ✧ 🌸</div><div class="section-title">Pick our day</div><p class="subtext">Choose whichever date works best for you. I'll take care of the rest.</p>
-<p class="subtext"><strong>Start:</strong> 15:00 &nbsp;·&nbsp; <strong>Finish:</strong> around 19:00–20:00</p>
-<div class="dates">
-<button class="date-option" data-date="Saturday, 24 October 2026" onclick="selectDate(this)"><div class="weekday">Saturday</div><div class="number">24</div><div class="month">October</div><div class="time">3:00 PM</div></button>
-<button class="date-option" data-date="Sunday, 25 October 2026" onclick="selectDate(this)"><div class="weekday">Sunday</div><div class="number">25</div><div class="month">October</div><div class="time">3:00 PM</div></button>
-<button class="date-option" data-date="Monday, 26 October 2026" onclick="selectDate(this)"><div class="weekday">Monday</div><div class="number">26</div><div class="month">October</div><div class="time">3:00 PM</div></button>
-<button class="date-option" data-date="Tuesday, 27 October 2026" onclick="selectDate(this)"><div class="weekday">Tuesday</div><div class="number">27</div><div class="month">October</div><div class="time">3:00 PM</div></button>
-<button class="date-option" data-date="Saturday, 31 October 2026" onclick="selectDate(this)"><div class="weekday">Saturday</div><div class="number">31</div><div class="month">October</div><div class="time">3:00 PM</div></button>
-<button class="date-option" data-date="Sunday, 1 November 2026" onclick="selectDate(this)"><div class="weekday">Sunday</div><div class="number">1</div><div class="month">November</div><div class="time">3:00 PM</div></button>
-</div>
-<div class="note"><div class="note-title">♡ A little note…</div><p>Wear something cute and comfortable, but make sure it's warm too!<br><br>I want you to feel as comfortable as possible. Don't worry about planning anything — I've got that covered. ♡</p></div>
-<button class="button" id="confirmButton" onclick="confirmDate()" disabled>It's a date! ♡</button><div class="footer">Made with a little courage & a lot of hope ♡</div>
-</section>
-<section class="confirmation" id="confirmation"><div class="eyebrow">It's official</div><h2>It's a date! ♡</h2><p>Well, you've just made someone very happy.<br>I can't wait to see you!</p><div class="chosen" id="chosenDate"></div><p>Your only job is to show up, look cute, stay warm, and enjoy yourself.<br><br>I'll handle the rest. ♡</p><button class="button" onclick="sendResponse()">Send my answer ♡</button><button class="secondary" onclick="goBack()">Choose a different date</button></section>
+
+  <!-- INVITATION -->
+
+  <section id="invitation">
+
+    <div class="eyebrow">A little invitation</div>
+
+    <div class="ornament">♡</div>
+
+    <h1>
+      Will you go on<br>
+      <em>a date with me?</em>
+    </h1>
+
+    <div class="photo-frame">
+
+      <img
+        src="portrait.jpg"
+        alt="A beautiful portrait"
+      >
+
+      <span class="photo-flower left">🌸</span>
+      <span class="photo-flower right">🌷</span>
+      <span class="photo-flower top">💗</span>
+
+    </div>
+
+    <p class="intro">
+      I've been thinking...
+      I'd really love to spend some time with you.
+      <br><br>
+      Just the two of us, good conversations,
+      a few laughs, something lovely to eat,
+      and hopefully a beautiful memory.
+      <br><br>
+      I've got a little something planned.
+      All I need is you.
+      <br><br>
+      So, what do you say? ♡
+    </p>
+
+    <div class="divider">✧</div>
+
+    <div class="section-title">
+      Pick our day 🌸
+    </div>
+
+    <p class="subtext">
+      Choose whichever date works best for you.
+      <br>
+      We'll start at 15:00 and finish
+      around 19:00–20:00.
+      <br>
+      I'll take care of the rest. ♡
+    </p>
+
+    <div class="dates">
+
+      <button class="date-option"
+        data-date="Saturday, 24 October 2026"
+        onclick="selectDate(this)">
+        <div class="weekday">Saturday</div>
+        <div class="date-number">24</div>
+        <div class="month">October</div>
+        <span class="time">15:00 Start</span>
+        <span class="finish">Until around 19:00–20:00</span>
+      </button>
+
+      <button class="date-option"
+        data-date="Sunday, 25 October 2026"
+        onclick="selectDate(this)">
+        <div class="weekday">Sunday</div>
+        <div class="date-number">25</div>
+        <div class="month">October</div>
+        <span class="time">15:00 Start</span>
+        <span class="finish">Until around 19:00–20:00</span>
+      </button>
+
+      <button class="date-option"
+        data-date="Monday, 26 October 2026"
+        onclick="selectDate(this)">
+        <div class="weekday">Monday</div>
+        <div class="date-number">26</div>
+        <div class="month">October</div>
+        <span class="time">15:00 Start</span>
+        <span class="finish">Until around 19:00–20:00</span>
+      </button>
+
+      <button class="date-option"
+        data-date="Tuesday, 27 October 2026"
+        onclick="selectDate(this)">
+        <div class="weekday">Tuesday</div>
+        <div class="date-number">27</div>
+        <div class="month">October</div>
+        <span class="time">15:00 Start</span>
+        <span class="finish">Until around 19:00–20:00</span>
+      </button>
+
+      <button class="date-option"
+        data-date="Saturday, 31 October 2026"
+        onclick="selectDate(this)">
+        <div class="weekday">Saturday</div>
+        <div class="date-number">31</div>
+        <div class="month">October</div>
+        <span class="time">15:00 Start</span>
+        <span class="finish">Until around 19:00–20:00</span>
+      </button>
+
+      <button class="date-option"
+        data-date="Sunday, 1 November 2026"
+        onclick="selectDate(this)">
+        <div class="weekday">Sunday</div>
+        <div class="date-number">01</div>
+        <div class="month">November</div>
+        <span class="time">15:00 Start</span>
+        <span class="finish">Until around 19:00–20:00</span>
+      </button>
+
+    </div>
+
+    <div class="treats">
+
+      <div class="treats-title">
+        A few sweet little things ♡
+      </div>
+
+      <div class="food-icons">
+        <span>🍓</span>
+        <span>🍒</span>
+        <span>🧁</span>
+        <span>🥐</span>
+        <span>🍰</span>
+      </div>
+
+      <p>
+        Good food, sweet treats,
+        and maybe a little raspberry surprise... ♡
+      </p>
+
+    </div>
+
+    <div class="note">
+
+      <div class="note-title">
+        ♡ A little note...
+      </div>
+
+      <p>
+        <strong>Dress code:</strong>
+        Wear something cute and comfortable,
+        but make sure it's warm too!
+        <br><br>
+        I want you to feel as comfortable
+        as possible, so don't stress
+        about what to wear.
+        <br><br>
+        As for where we're going and what
+        we're doing...
+        <br>
+        Well, that's a little surprise. 🌸
+        <br><br>
+        Just bring yourself and your
+        lovely smile. I'll handle the rest. ♡
+      </p>
+
+    </div>
+
+    <button
+      id="confirmButton"
+      class="button"
+      onclick="confirmDate()"
+      disabled>
+      It's a date! ♡
+    </button>
+
+    <div class="footer">
+      Made with a little courage,
+      a few flowers & a lot of hope ♡
+    </div>
+
+  </section>
+
+  <!-- CONFIRMATION -->
+
+  <section id="confirmation" class="confirmation">
+
+    <div class="eyebrow">It's official</div>
+
+    <div class="ornament">🌸 ♡ 🌸</div>
+
+    <h2>It's a date! ♡</h2>
+
+    <p>
+      Well, you've just made someone
+      very happy.
+      <br><br>
+      I can't wait to see you!
+    </p>
+
+    <div class="chosen-date" id="chosenDate"></div>
+
+    <div class="food-icons">
+      <span>🌷</span>
+      <span>🍓</span>
+      <span>💗</span>
+      <span>🧁</span>
+      <span>🌸</span>
+    </div>
+
+    <p>
+      Your only job is to show up,
+      look cute, stay warm,
+      and enjoy yourself.
+      <br><br>
+      I'll handle the rest.
+      <br><br>
+      Looking forward to making
+      a lovely memory with you. ♡
+    </p>
+
+    <button class="button" onclick="sendResponse()">
+      Send my answer ♡
+    </button>
+
+    <button class="secondary" onclick="goBack()">
+      Choose a different date
+    </button>
+
+    <div class="footer">
+      A little date, a little magic ♡
+    </div>
+
+  </section>
+
 </main>
+
 <script>
-let selectedDate='';
-// Replace this with your email address to receive her response.
-const yourEmail='you@example.com';
-function selectDate(button){document.querySelectorAll('.date-option').forEach(b=>b.classList.remove('selected'));button.classList.add('selected');selectedDate=button.dataset.date;document.getElementById('confirmButton').disabled=false}
-function confirmDate(){if(!selectedDate)return;document.getElementById('invitation').style.display='none';document.getElementById('confirmation').style.display='block';document.getElementById('chosenDate').textContent=selectedDate+' · 15:00 to around 19:00–20:00';window.scrollTo({top:0,behavior:'smooth'});confetti()}
-function goBack(){document.getElementById('confirmation').style.display='none';document.getElementById('invitation').style.display='block'}
-function sendResponse(){const subject="It's a date! ♡";const body="I'd love to go on a date with you! ♡\n\nMy chosen date is:\n"+selectedDate+" · 15:00 to around 19:00–20:00\n\nLooking forward to it!";location.href='mailto:'+yourEmail+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body)}
-function confetti(){for(let i=0;i<40;i++){let p=document.createElement('span');p.textContent=['♥','♡','🌸','🌷','🍓','🌼'][Math.floor(Math.random()*3)];p.style.cssText=`position:fixed;top:-25px;left:${Math.random()*100}vw;color:#c78d9d;font-size:${12+Math.random()*18}px;pointer-events:none;z-index:20;transition:transform 3s ease-in,opacity 3s ease-in`;document.body.appendChild(p);requestAnimationFrame(()=>{p.style.transform=`translateY(${innerHeight+100}px) rotate(${Math.random()*700}deg)`;p.style.opacity='0'});setTimeout(()=>p.remove(),3200)}}
+
+/* EMAIL ADDRESS */
+
+const yourEmail = "you@example.com";
+
+let selectedDate = "";
+
+/* DATE SELECTION */
+
+function selectDate(button) {
+
+  document.querySelectorAll(".date-option")
+    .forEach(option => {
+      option.classList.remove("selected");
+      option.setAttribute("aria-pressed", "false");
+    });
+
+  button.classList.add("selected");
+  button.setAttribute("aria-pressed", "true");
+
+  selectedDate = button.dataset.date;
+
+  document.getElementById("confirmButton").disabled = false;
+
+  // Small celebratory burst when selecting a date
+  burst(
+    window.innerWidth / 2,
+    window.innerHeight / 2,
+    28
+  );
+
+}
+
+/* CONFIRMATION */
+
+function confirmDate() {
+
+  if (!selectedDate) return;
+
+  document.getElementById("invitation").style.display = "none";
+  document.getElementById("confirmation").style.display = "block";
+
+  document.getElementById("chosenDate").innerHTML =
+    "🌸 " + selectedDate +
+    "<br>15:00 – approximately 19:00/20:00 ♡";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  // Bigger fireworks celebration
+  celebrate();
+
+}
+
+/* GO BACK */
+
+function goBack() {
+
+  document.getElementById("confirmation").style.display = "none";
+  document.getElementById("invitation").style.display = "block";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+/* SEND RESPONSE */
+
+function sendResponse() {
+
+  if (!selectedDate) return;
+
+  const subject = "It's a date! ♡";
+
+  const body =
+    "I'd love to go on a date with you! ♡\n\n" +
+    "My chosen date is:\n" +
+    selectedDate + "\n\n" +
+    "Start time: 15:00\n" +
+    "Approximate finish: 19:00–20:00\n\n" +
+    "Looking forward to it! 🌸";
+
+  window.location.href =
+    "mailto:" + yourEmail +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body);
+
+}
+
+/* FIREWORKS ENGINE */
+
+const canvas = document.getElementById("fireworksCanvas");
+const ctx = canvas.getContext("2d");
+
+let particles = [];
+let lastAmbient = 0;
+let animationId;
+
+const reduceMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
+
+const colors = [
+  "#e879a4",
+  "#ffb3c7",
+  "#f4c46b",
+  "#c5a3f0",
+  "#ff8da1",
+  "#f7a8d0",
+  "#ffffff"
+];
+
+function resizeCanvas() {
+  const ratio = Math.min(window.devicePixelRatio || 1, 2);
+
+  canvas.width = Math.floor(window.innerWidth * ratio);
+  canvas.height = Math.floor(window.innerHeight * ratio);
+
+  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+class Particle {
+
+  constructor(x, y, color, angle, speed) {
+    this.x = x;
+    this.y = y;
+    this.vx = Math.cos(angle) * speed;
+    this.vy = Math.sin(angle) * speed;
+    this.color = color;
+    this.life = 1;
+    this.decay = .012 + Math.random() * .012;
+    this.size = 1.5 + Math.random() * 2;
+    this.gravity = .035;
+    this.friction = .985;
+  }
+
+  update() {
+    this.vx *= this.friction;
+    this.vy *= this.friction;
+
+    this.vy += this.gravity;
+
+    this.x += this.vx;
+    this.y += this.vy;
+
+    this.life -= this.decay;
+  }
+
+  draw() {
+    ctx.save();
+
+    ctx.globalAlpha = Math.max(0, this.life);
+
+    ctx.fillStyle = this.color;
+    ctx.shadowBlur = 12;
+    ctx.shadowColor = this.color;
+
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.restore();
+  }
+
+}
+
+function burst(x, y, amount = 45) {
+
+  if (reduceMotion) return;
+
+  const color = colors[
+    Math.floor(Math.random() * colors.length)
+  ];
+
+  for (let i = 0; i < amount; i++) {
+
+    const angle = (Math.PI * 2 * i) / amount;
+    const speed = 1.5 + Math.random() * 3.5;
+
+    particles.push(
+      new Particle(x, y, color, angle, speed)
+    );
+
+  }
+
+}
+
+function animate(time) {
+
+  ctx.clearRect(
+    0,
+    0,
+    window.innerWidth,
+    window.innerHeight
+  );
+
+  // Gentle fireworks appearing in the background
+  if (time - lastAmbient > 2200) {
+
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight * .75;
+
+    burst(x, y, 35);
+
+    lastAmbient = time;
+  }
+
+  particles = particles.filter(p => p.life > 0);
+
+  for (const particle of particles) {
+    particle.update();
+    particle.draw();
+  }
+
+  animationId = requestAnimationFrame(animate);
+
+}
+
+function celebrate() {
+
+  if (reduceMotion) return;
+
+  // Several fireworks together
+  for (let i = 0; i < 7; i++) {
+
+    setTimeout(() => {
+
+      burst(
+        window.innerWidth * (.15 + Math.random() * .7),
+        window.innerHeight * (.1 + Math.random() * .55),
+        70
+      );
+
+    }, i * 350);
+
+  }
+
+  launchConfetti();
+
+}
+
+/* FLOATING HEARTS AND FLOWERS */
+
+function launchConfetti() {
+
+  const symbols = [
+    "🌸", "🌷", "🌼", "💗",
+    "♡", "♥", "🍓", "🍒", "✦"
+  ];
+
+  for (let i = 0; i < 55; i++) {
+
+    const piece = document.createElement("span");
+
+    piece.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    piece.style.position = "fixed";
+    piece.style.left = Math.random() * 100 + "vw";
+    piece.style.top = "-30px";
+    piece.style.fontSize = (13 + Math.random() * 18) + "px";
+    piece.style.pointerEvents = "none";
+    piece.style.zIndex = "100";
+    piece.style.opacity = "1";
+    piece.style.transition =
+      "transform 3.5s ease-in, opacity 3.5s ease-in";
+
+    document.body.appendChild(piece);
+
+    requestAnimationFrame(() => {
+
+      piece.style.transform =
+        "translateY(" +
+        (window.innerHeight + 120) +
+        "px) rotate(" +
+        (Math.random() * 720) +
+        "deg)";
+
+      piece.style.opacity = "0";
+
+    });
+
+    setTimeout(() => piece.remove(), 3700);
+
+  }
+
+}
+
+/* START ANIMATION */
+
+if (!reduceMotion) {
+  animationId = requestAnimationFrame(animate);
+}
+
 </script>
-</body></html>
+
+</body>
+</html>
