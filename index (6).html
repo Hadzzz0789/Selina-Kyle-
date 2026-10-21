@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Little Invitation ♡</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#623d4b;--rose:#ad7182;--muted:#967783;--line:#efd8df}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 20% 10%,#fffaf8,#f9e5e9 65%,#f3d5de);font-family:'DM Sans',sans-serif;color:var(--ink);display:grid;place-items:center;padding:30px 15px;overflow-x:hidden}.card{width:min(100%,520px);padding:28px 34px 40px;background:rgba(255,255,255,.9);border:1px solid white;border-radius:30px;box-shadow:0 25px 75px #925b6b2b;text-align:center;position:relative;z-index:1;animation:appear .8s both}.portrait{width:100%;height:310px;object-fit:cover;object-position:center 40%;border-radius:20px;display:block}.photo-wrap{position:relative;margin-bottom:27px}.photo-wrap:after{content:'♡';position:absolute;bottom:-18px;right:20px;background:#fff7f8;border:1px solid var(--line);color:var(--rose);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:27px}.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--rose);font-weight:700}h1,h2,.section-title,.note-title{font-family:'Playfair Display',serif;font-weight:500}h1{font-size:clamp(38px,8vw,54px);line-height:1.14;margin:16px 0 18px;letter-spacing:-1px}h1 em{color:var(--rose);font-weight:400}.intro{font-size:14px;color:var(--muted);line-height:1.85;margin:0 auto 26px;max-width:355px}.divider{display:flex;align-items:center;gap:15px;color:var(--rose);margin:26px 0}.divider:before,.divider:after{content:'';height:1px;background:var(--line);flex:1}.section-title{font-size:25px;margin-bottom:7px}.subtext{font-size:12px;color:var(--muted);margin-bottom:22px}.dates{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.date-option{font:inherit;background:white;color:var(--ink);border:1.5px solid var(--line);border-radius:16px;padding:19px 10px;cursor:pointer;position:relative;transition:.2s}.date-option:hover{transform:translateY(-3px);border-color:var(--rose)}.date-option.selected{background:#fbe9ee;border-color:var(--rose);box-shadow:0 0 0 2px #ad718220}.date-option.selected:after{content:'♥';position:absolute;right:12px;top:8px;color:var(--rose)}.weekday{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted)}.number{font:35px 'Playfair Display',serif;margin:5px 0}.month{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}.time{font-size:12px;font-weight:700;color:var(--rose);margin-top:12px}.note{background:#fdf0f3;border:1px solid #f3dce2;border-radius:18px;text-align:left;padding:22px;margin:28px 0}.note-title{font-size:21px;margin-bottom:10px}.note p{font-size:13px;line-height:1.8;color:#8f6c77;margin:0}.button{width:100%;border:0;border-radius:40px;padding:18px;background:var(--rose);color:white;font:700 14px 'DM Sans',sans-serif;cursor:pointer;transition:.2s}.button:hover:not(:disabled){background:#965b6b;transform:translateY(-2px)}.button:disabled{opacity:.45;cursor:not-allowed}.footer{font-size:11px;color:#b18e99;margin-top:23px}.confirmation{display:none;animation:appear .6s both}.confirmation h2{font-size:43px}.confirmation p{color:var(--muted);font-size:14px;line-height:1.85}.chosen{background:#fdf0f3;border-radius:16px;padding:20px;margin:24px 0;font-weight:700}.secondary{border:0;background:none;color:var(--rose);text-decoration:underline;margin-top:20px;cursor:pointer}.heart{position:fixed;pointer-events:none;color:#cb91a1;opacity:.3;font-size:32px;animation:float 7s ease-in-out infinite}@keyframes float{50%{transform:translateY(-30px) rotate(15deg)}}@keyframes appear{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@media(max-width:450px){.card{padding:18px 20px 32px}.portrait{height:265px}}
+
+/* Garden decorations: flowers, raspberries and sweet treats */
+.garden{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.garden-item{position:absolute;display:block;font-size:clamp(23px,4vw,43px);opacity:.75;filter:drop-shadow(0 4px 7px #a76b7820);animation:drift 7s ease-in-out infinite alternate;user-select:none}
+.garden-item:nth-child(even){animation-duration:9s;animation-delay:-3s}
+.garden-item:nth-child(3n){animation-duration:11s;animation-delay:-6s}
+@keyframes drift{from{transform:translateY(0) rotate(-12deg)}to{transform:translateY(-24px) rotate(14deg)}}
+.photo-wrap{isolation:isolate}.photo-wrap .photo-flower{position:absolute;z-index:2;font-size:33px;filter:drop-shadow(0 3px 4px #0002);pointer-events:none}.photo-flower.one{top:-13px;left:-12px;transform:rotate(-15deg)}.photo-flower.two{top:-12px;right:-10px;transform:rotate(20deg)}.photo-flower.three{bottom:-13px;left:-10px;transform:rotate(-20deg)}
+.treats{display:flex;align-items:center;justify-content:center;gap:14px;font-size:25px;margin:14px 0 18px}.treats span{display:inline-block;animation:drift 5s ease-in-out infinite alternate}.treats span:nth-child(even){animation-delay:-2s}
+.berry-message{font-size:12px;color:var(--rose);margin:0 0 19px;letter-spacing:.3px}
+.card{overflow:hidden}
+@media(max-width:700px){.garden-item{opacity:.32;font-size:25px}.garden-item:nth-child(n+11){display:none}.photo-wrap .photo-flower{font-size:26px}}
+@media(prefers-reduced-motion:reduce){.garden-item,.treats span{animation:none}}
+</style>
+</head>
+<body>
+<div class="garden" aria-hidden="true">
+  <span class="garden-item" style="top:4%;left:3%">🌸</span>
+  <span class="garden-item" style="top:12%;right:4%">🌷</span>
+  <span class="garden-item" style="top:28%;left:2%">🍓</span>
+  <span class="garden-item" style="top:36%;right:2%">🧁</span>
+  <span class="garden-item" style="top:49%;left:3%">🌼</span>
+  <span class="garden-item" style="top:58%;right:3%">🍒</span>
+  <span class="garden-item" style="top:69%;left:2%">🥐</span>
+  <span class="garden-item" style="top:80%;right:2%">🌹</span>
+  <span class="garden-item" style="top:91%;left:5%">🍰</span>
+  <span class="garden-item" style="top:95%;right:5%">🌸</span>
+  <span class="garden-item" style="top:22%;right:10%">🫐</span>
+  <span class="garden-item" style="top:75%;left:11%">🍓</span>
+</div>
+<span class="heart" style="top:12%;left:5%">♡</span><span class="heart" style="top:70%;right:5%;animation-delay:2s">♥</span>
+<main class="card">
+<div class="photo-wrap"><img class="portrait" src="portrait.jpg" alt="Portrait for the date invitation"><span class="photo-flower one" aria-hidden="true">🌸</span><span class="photo-flower two" aria-hidden="true">🌷</span><span class="photo-flower three" aria-hidden="true">🌼</span></div>
+<section id="invitation">
+<div class="eyebrow">✦ A little invitation ✦</div><div class="treats" aria-hidden="true"><span>🌷</span><span>🍓</span><span>🌸</span><span>🧁</span><span>🌹</span></div>
+<h1>Will you go on<br><em>a date with me?</em></h1>
+<p class="intro">I've been thinking… I'd really love to spend some time with you.<br><br>Just the two of us, good conversations, a few laughs, and hopefully a lovely memory.<br><br>So, what do you say? ♡</p>
+<p class="berry-message">A little sweetness, just for you ♡</p><div class="divider">🌸 ✧ 🌸</div><div class="section-title">Pick our day</div><p class="subtext">Choose whichever date works best for you. I'll take care of the rest.</p>
+<p class="subtext"><strong>Start:</strong> 15:00 &nbsp;·&nbsp; <strong>Finish:</strong> around 19:00–20:00</p>
+<div class="dates">
+<button class="date-option" data-date="Saturday, 24 October 2026" onclick="selectDate(this)"><div class="weekday">Saturday</div><div class="number">24</div><div class="month">October</div><div class="time">3:00 PM</div></button>
+<button class="date-option" data-date="Sunday, 25 October 2026" onclick="selectDate(this)"><div class="weekday">Sunday</div><div class="number">25</div><div class="month">October</div><div class="time">3:00 PM</div></button>
+<button class="date-option" data-date="Monday, 26 October 2026" onclick="selectDate(this)"><div class="weekday">Monday</div><div class="number">26</div><div class="month">October</div><div class="time">3:00 PM</div></button>
+<button class="date-option" data-date="Tuesday, 27 October 2026" onclick="selectDate(this)"><div class="weekday">Tuesday</div><div class="number">27</div><div class="month">October</div><div class="time">3:00 PM</div></button>
+<button class="date-option" data-date="Saturday, 31 October 2026" onclick="selectDate(this)"><div class="weekday">Saturday</div><div class="number">31</div><div class="month">October</div><div class="time">3:00 PM</div></button>
+<button class="date-option" data-date="Sunday, 1 November 2026" onclick="selectDate(this)"><div class="weekday">Sunday</div><div class="number">1</div><div class="month">November</div><div class="time">3:00 PM</div></button>
+</div>
+<div class="note"><div class="note-title">♡ A little note…</div><p>Wear something cute and comfortable, but make sure it's warm too!<br><br>I want you to feel as comfortable as possible. Don't worry about planning anything — I've got that covered. ♡</p></div>
+<button class="button" id="confirmButton" onclick="confirmDate()" disabled>It's a date! ♡</button><div class="footer">Made with a little courage & a lot of hope ♡</div>
+</section>
+<section class="confirmation" id="confirmation"><div class="eyebrow">It's official</div><h2>It's a date! ♡</h2><p>Well, you've just made someone very happy.<br>I can't wait to see you!</p><div class="chosen" id="chosenDate"></div><p>Your only job is to show up, look cute, stay warm, and enjoy yourself.<br><br>I'll handle the rest. ♡</p><button class="button" onclick="sendResponse()">Send my answer ♡</button><button class="secondary" onclick="goBack()">Choose a different date</button></section>
+</main>
+<script>
+let selectedDate='';
+// Replace this with your email address to receive her response.
+const yourEmail='you@example.com';
+function selectDate(button){document.querySelectorAll('.date-option').forEach(b=>b.classList.remove('selected'));button.classList.add('selected');selectedDate=button.dataset.date;document.getElementById('confirmButton').disabled=false}
+function confirmDate(){if(!selectedDate)return;document.getElementById('invitation').style.display='none';document.getElementById('confirmation').style.display='block';document.getElementById('chosenDate').textContent=selectedDate+' · 15:00 to around 19:00–20:00';window.scrollTo({top:0,behavior:'smooth'});confetti()}
+function goBack(){document.getElementById('confirmation').style.display='none';document.getElementById('invitation').style.display='block'}
+function sendResponse(){const subject="It's a date! ♡";const body="I'd love to go on a date with you! ♡\n\nMy chosen date is:\n"+selectedDate+" · 15:00 to around 19:00–20:00\n\nLooking forward to it!";location.href='mailto:'+yourEmail+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body)}
+function confetti(){for(let i=0;i<40;i++){let p=document.createElement('span');p.textContent=['♥','♡','🌸','🌷','🍓','🌼'][Math.floor(Math.random()*3)];p.style.cssText=`position:fixed;top:-25px;left:${Math.random()*100}vw;color:#c78d9d;font-size:${12+Math.random()*18}px;pointer-events:none;z-index:20;transition:transform 3s ease-in,opacity 3s ease-in`;document.body.appendChild(p);requestAnimationFrame(()=>{p.style.transform=`translateY(${innerHeight+100}px) rotate(${Math.random()*700}deg)`;p.style.opacity='0'});setTimeout(()=>p.remove(),3200)}}
+</script>
+</body></html>
